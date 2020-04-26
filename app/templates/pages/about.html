@@ -1,0 +1,102 @@
+{% extends "layouts/default.html" %}
+
+{% block title %} About {% endblock title %}
+
+{% block stylesheets %}
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- Page Styling -->
+<style>
+	body{
+		background-color: #2c2c2c;
+		color: white;
+		margin-bottom: 0.25em;
+		margin-left: 0.25;
+		margin-right: 0.25;
+		padding: 1em;
+	}
+	/* unvisited link */
+	a:link {
+	color: #feb24c;
+	}
+
+	/* visited link */
+	a:visited {
+	color:#fed976;
+	}
+
+	/* mouse over link */
+	a:hover {
+	color: #fd8d3c;
+	}
+
+	/* selected link */
+	a:active {
+	color: #b10026;
+	}
+</style>
+
+<!-- Home Button -->
+<div>
+    <style scoped>
+
+        .button-large {
+            font-size: 125%;
+			background-color: rgb(65, 65, 65);
+			color: white;
+        }
+
+    </style>
+	<a class="button-large pure-button" href="index.html">firewatchBC Home Page</a>
+</div>
+
+<!-- Page Content -->
+<body>
+	
+	<h1 style= "color:#fc4e2a"> About: </h1>
+	<h2 style= "color:#fd8d3c"> Project Description: </h2>
+	
+	<br/>
+
+	firewatchBC is in an interactive web visualization for monitoring wildfires within British Columbia. The application was created as an interdisciplinary Computer Science
+	and Geography project for CSc 497 at the University of Victoria. The firewatchBC map allows users to view the current locations and sizes of wildfires in BC, as well as 
+	viewing the maximum and minimum temperature and precipitation for select fire locations (I hope to add this feature for ALL fire locations soon).
+	<br/>
+	<br/>
+	The application is built on the <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> micro web-framework for python3 and deployed using 
+	<a href="https://www.docker.com/?utm_source=google&utm_medium=cpc&utm_campaign=dockerhomepage&utm_content=namer&utm_term=dockerhomepage&utm_budget=growth&gclid=EAIaIQobChMI-s-Vt_Lu6AIVj8BkCh36ogQvEAAYASAAEgJ44_D_BwE">Docker</a> 
+	and <a href="https://www.heroku.com/">Heroku</a>. 
+	The overlays shown in the firewatchBC Map were created using the <a href="https://python-visualization.github.io/folium/">Folium</a> package for
+	visualization and <a href="https://geopandas.org/">GeoPandas</a> for data management. The <a href="https://matplotlib.org/">matplotlib</a> package was used to create the
+	temperature and precipitation line graphs.
+
+	<h2 style= "color:#feb24c"> Data: </h2>
+	<b>Environment Canada Weather Station Locations: </b> The weather station locations data was from the <a href="https://matplotlib.org/">Government of Canada</a>. 
+	This data was difficult to work with as it required downloading each dataset on a station by station basis. Fortunately, a dataset provided by
+	<a href="https://brocku.ca/library/collections/mdg/maps-geodata/canada-weather-stations/">Brock University </a> organized the stations on a provincial level.
+	<br/>
+	<br/>
+	<b>Environment Canada Weather Station Climate Data: </b> The temperature and precipitation readings were obtained from the 
+	<a href="https://www.pacificclimate.org/data/bc-station-data">Pacific Climate Impacts Consortium (PCIC)</a> Data Portal. I was unable
+	to successfully link the PCIC data with the location data in all instances. The ID values given by PCIC did not seem to match the ID values
+	given by Environment Canada. This is something to look further into in the future.
+	<br/>
+	<br/>
+	<b>Current Fire Locations: </b> The fire location data was obtained from the
+	<a href="https://catalogue.data.gov.bc.ca/dataset?q=&sector=Natural+Resources&res_format=shp&sort=views_total+desc&organization=bc-wildfire-service">Government of British Columbia</a>
+	Open Data catalogue. This dataset is frequently updated.
+
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+	<b>Application Developer:</b> Connor Schultz
+
+</body>
+
+{% endblock content %}

@@ -1,0 +1,6 @@
+flask
+gunicorn
+folium
+pandas
+geopandas
+pyshp

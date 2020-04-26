@@ -1,0 +1,74 @@
+{% extends "layouts/default.html" %}
+
+{% block title %} error404 {% endblock title %}
+
+{% block stylesheets %}
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- Page Styling -->
+<style>
+	body{
+		background-color: #2c2c2c;
+		color: rgb(100, 100, 100);
+		margin-bottom: 0.25em;
+		margin-left: 0.25;
+		margin-right: 0.25;
+		padding: 1em;
+	}
+	h1{
+		color:#fc4e2a;
+	}
+	h3{
+		color: #fd8d3c;
+	}
+	h4{
+		color:#feb24c;
+	}
+	/* unvisited link */
+	a:link {
+	color: #feb24c;
+	}
+
+	/* visited link */
+	a:visited {
+	color:#fed976;
+	}
+
+	/* mouse over link */
+	a:hover {
+	color: #fd8d3c;
+	}
+
+	/* selected link */
+	a:active {
+	color: #b10026;
+	}
+</style>
+
+<!-- Home Button -->
+<body>
+	<div>
+		<style scoped>
+	
+			.button-large {
+				font-size: 125%;
+				background-color: rgb(65, 65, 65);
+				color: white;
+			}
+	
+		</style>
+		<a class="button-large pure-button" href="index.html">firewatchBC Home Page</a>
+	</div>
+</body>
+
+<!-- Page Content -->
+<h1> Sorry! </h1>
+
+<h3> The page you are looking for has not been found.</h3>
+
+<h4> Click the button above to return to safety.</h4>
+
+{% endblock content %}

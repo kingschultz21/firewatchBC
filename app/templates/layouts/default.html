@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>
+		firewatchBC - {% block title %}{% endblock %} 
+	</title>
+	
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="/static/assets/img/fireicon_red.png" type="image/x-icon"/>
+	
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+	<!-- Specific CSS goes HERE -->
+	{% block stylesheets %}{% endblock stylesheets %}
+	
+</head>
+<body>
+	<div class="wrapper {% block layout %}{% endblock layout %}">
+		<div class="main-panel">
+			<div class="content">
+
+				{% block content %}{% endblock content %}
+			
+			</div>
+		<div class="body">
+
+			{% block body %}{% endblock body %}
+		
+		</div>
+	</div>
+</body>
+</html>
